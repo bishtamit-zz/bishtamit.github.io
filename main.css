@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Montserrat;
   /* box-sizing: border-box; */
 }
 
@@ -15,7 +16,10 @@
   grid-template-columns: 1fr 1fr;
   margin-bottom: 10vh;
   min-height: 25vh;
+  border-top: 10px solid grey;
+  padding-top: 10px;
 }
+
 
 .wrapper {
   margin: 0 10vw;
@@ -36,6 +40,8 @@
 .profile-box {
   display: grid;
   grid-gap: 10px;
+  justify-items: center;
+  align-items: center;
   grid-template-areas:
     "profile-img basic-info"
     "profile-img social-contacts";
@@ -43,13 +49,42 @@
 
 .profile-img {
   grid-area: profile-img;
-  align-self: end;
+  /* align-items: end; */
+  justify-self: end;
 }
 
 .basic-info {
   grid-area: basic-info;
+  justify-self: start;
+  align-self: end;
 }
 
 .social-contacts {
   grid-area: social-contacts;
+  justify-self: start;
+  align-self: start;
+}
+
+.contact-me {
+  align-self: center;
+  justify-self: center;
+}
+
+
+.btn {
+  padding: 10px 30px;
+  border: none;
+  background: grey;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.btn-green {
+  background-color: green;
+}
+
+.btn-green:active {
+  background-color: rgba(0, 128, 0, 0.651);
 }
