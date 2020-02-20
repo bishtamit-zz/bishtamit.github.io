@@ -1,13 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+:root {
+  --common-background: rgba(211, 211, 211, 0.411);
+}
 * {
   margin: 0;
   padding: 0;
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
+
   /* box-sizing: border-box; */
 }
 
 .wrapper {
   display: grid;
   grid-gap: 30px;
+  background-color: var(--common-background);
+  padding: 20px;
 }
 
 .header {
@@ -16,10 +24,11 @@
   grid-template-columns: 1fr 1fr;
   margin-bottom: 10vh;
   min-height: 25vh;
-  border-top: 10px solid grey;
-  padding-top: 10px;
-}
+  border-top: 10px solid rgba(100, 148, 237, 0.651);
 
+  background-color: var(--common-background);
+  padding: 20px 0;
+}
 
 .wrapper {
   margin: 0 10vw;
@@ -30,8 +39,8 @@
   height: 200px;
   border-radius: 50%;
   overflow: hidden;
-  
 }
+
 .profile-img img {
   width: 200px;
   height: auto;
@@ -59,32 +68,59 @@
   align-self: end;
 }
 
+.basic-info h1 {
+  font-size: 2rem;
+}
+
+.basic-info p {
+  font-weight: 900;
+  color: grey;
+}
+
 .social-contacts {
   grid-area: social-contacts;
   justify-self: start;
   align-self: start;
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
+
+.social-contacts a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: inherit;
+  text-transform: capitalize;
+  outline: none;
+  text-align: center;
+}
+
 
 .contact-me {
   align-self: center;
   justify-self: center;
 }
 
-
 .btn {
   padding: 10px 30px;
+  font-size: 1.2em;
   border: none;
   background: grey;
   text-decoration: none;
   color: white;
   text-transform: uppercase;
   border-radius: 5px;
+  font-weight: 900;
+  user-select: none;
+  transition: background-color 200ms ease-in, border 1000ms ease-in;
 }
 
 .btn-green {
   background-color: green;
 }
 
-.btn-green:active {
-  background-color: rgba(0, 128, 0, 0.651);
+.btn:hover {
+  background-color: rgb(0, 110, 0);
+  border: 3px solid rgba(121, 154, 216, 0.404);
 }
