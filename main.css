@@ -1,16 +1,24 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+/* @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap"); */
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap'); */
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
 :root {
-  --common-background: rgba(211, 211, 211, 0.411);
+  --common-background: #f5f5f5;
 }
+
 * {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
-
-  /* box-sizing: border-box; */
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Lato";
+  box-sizing: border-box;
+  font-weight: 100;
 }
 
+body {
+  background-color: rgb(218, 227, 231);
+}
 .wrapper {
   display: grid;
   grid-gap: 30px;
@@ -21,11 +29,11 @@
 .header {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 1fr 2fr;
+  grid-template-areas: "profile-box . contact-me";
   margin-bottom: 10vh;
-  min-height: 25vh;
+  min-height: 20vh;
   border-top: 10px solid rgba(100, 148, 237, 0.651);
-
   background-color: var(--common-background);
   padding: 20px 0;
 }
@@ -35,8 +43,8 @@
 }
 
 .profile-img {
-  width: 200px;
-  height: 200px;
+  width: 175px;
+  height: 175px;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -48,7 +56,8 @@
 
 .profile-box {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 10px 20px;
+  grid-area: profile-box;
   justify-items: center;
   align-items: center;
   grid-template-areas:
@@ -96,10 +105,10 @@
   text-align: center;
 }
 
-
 .contact-me {
   align-self: center;
   justify-self: center;
+  grid-area: contact-me;
 }
 
 .btn {
@@ -123,4 +132,13 @@
 .btn:hover {
   background-color: rgb(0, 110, 0);
   border: 3px solid rgba(121, 154, 216, 0.404);
+}
+
+.wrapper h2 {
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+.about-me p {
+  font-weight: 200;
 }
